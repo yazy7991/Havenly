@@ -4,9 +4,10 @@ function App() {
  
   return (
     <>
-      <h1>
-        This is the heading
-      </h1>
+      <div className="text-red-500 text-2xl font-bold">
+  If this is red, Tailwind is working!
+</div>
+
     
     </>
   )
