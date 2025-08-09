@@ -1,10 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { assets, projectsData } from '../assets/assets'
 
 const Projects = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsToShow, setCardsToShow] = useState(1);
+
+    {/**Adding a Use Effect Hook */}
+
+    useEffect(()=>{
+        const updateCardsToShow = () =>{
+            if(window.innerWidth >= 1024){
+                setCardsToShow(projectsData.length)   
+            }else{
+                setCardsToShow(1)
+
+            }
+        };
+            updateCardsToShow()
+
+            window.addEventListener('resize', updateCardsToShow)
+
+            return ()=> window.removeEventListener('resize', updateCardsToShow)
+
+    },[])
 
     {/**Adding the functionalities for the buttons */}
 
