@@ -46,12 +46,12 @@ const Footer = () => {
                     className='py-2 px-4 rounded bg-blue-500 
                     text-white'>Subscribe</button>
                 </div>
-                
-
-
             </div>
         </div>
-        <div></div>
+        <div className='border-t border-gray-700
+        py-4 mt-10 text-center text-gray-500'>
+            Copyright 2025 &copy; Yazy. All Right Reserved.
+        </div>
       
     </div>
   )
